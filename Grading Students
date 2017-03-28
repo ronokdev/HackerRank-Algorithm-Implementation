@@ -1,0 +1,51 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        for(int a0 = 0; a0 < n; a0++){
+            int grade = in.nextInt();  // 67
+            int first_num = grade / 10; // 6
+            int second_num = grade % 10; // 6
+          
+            first_num = first_num * 10; // 60
+          
+           if(first_num < grade && second_num<=5)
+           {
+              first_num = first_num+5;
+           }
+          else{
+             first_num = first_num+10;
+          }
+          
+          int dif = first_num - grade ;
+          
+          if(dif < 0 ){dif = -dif;}
+          
+          if(dif < 3)
+          {
+                int grade_temp = grade+dif;
+                if(grade_temp >= 40)
+                {
+                      grade = grade_temp;
+                }
+                 
+          }
+            
+          if(grade >= 40)
+          {
+            System.out.println(grade);
+          }
+          else
+          {
+                System.out.println(grade);
+          }
+        }
+    }
+}
