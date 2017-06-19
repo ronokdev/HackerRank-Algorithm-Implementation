@@ -1,0 +1,72 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package hackerrank;
+
+/**
+ *
+ * @author ronok
+ */
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class apple_and_orange {
+    public static void main(String[] args){
+        
+        int dBetweenAppleTreeAndHome = 0;
+        int dBetweenOrangeTreeAndHome=0;
+        int appleCount=0;
+        int orangeCount =0;
+        
+        Scanner in = new Scanner(System.in);
+        int s = in.nextInt(); // start point of the house
+        int t = in.nextInt(); // End point of the house
+        int a = in.nextInt(); // apple tree is at the point
+        int b = in.nextInt(); // orange tree is at the point
+        int m = in.nextInt(); // number of apple
+        int n = in.nextInt(); // number of orange
+        
+        int[] apple = new int[m];
+        for(int apple_i=0; apple_i < m; apple_i++){
+            apple[apple_i] = in.nextInt();
+        }
+        
+        int[] orange = new int[n];
+        for(int orange_i=0; orange_i < n; orange_i++){
+            orange[orange_i] = in.nextInt();
+        }
+        
+        
+        
+        for(int i=0;i<apple.length-1;i++){
+            
+            int firstResult = a+apple[i];
+            
+            if(firstResult >= 7 && firstResult <= 11){
+                appleCount++;
+            }
+            
+        }
+        
+        for(int i=0;i<orange.length-1;i++){
+            
+            int secondResult = a+orange[i];
+            
+            if(secondResult >= 7 && secondResult <= 11){
+                orangeCount++;
+            }
+            
+        }
+        
+        
+        System.out.println(appleCount);
+        System.out.println(orangeCount);
+        
+        
+    }
+}
