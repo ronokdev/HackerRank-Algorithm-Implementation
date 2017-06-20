@@ -43,22 +43,24 @@ public class apple_and_orange {
         
         
         
-        for(int i=0;i<apple.length-1;i++){
+        for(int i=0;i<m;i++){
+            long firstResult=0;
+            firstResult = a+apple[i];
             
-            int firstResult = a+apple[i];
-            
-            if(firstResult >= 7 && firstResult <= 11){
+            if(firstResult >= s && firstResult <= t){
                 appleCount++;
+                
             }
             
         }
         
-        for(int i=0;i<orange.length-1;i++){
+        for(int i=0;i<n;i++){
+            long secondResult=0;
+            secondResult = b+orange[i];
             
-            int secondResult = a+orange[i];
-            
-            if(secondResult >= 7 && secondResult <= 11){
+            if(secondResult >= s && secondResult <= t){
                 orangeCount++;
+                
             }
             
         }
